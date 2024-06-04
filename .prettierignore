@@ -1,0 +1,16 @@
+.esbuild
+.esbuild/.build/
+node_modules
+.gitignore
+.nvmrc
+README.md
+package.json
+package-lock.json
+dist
+coverage
+src/generated/*
+
+/.nx/cache
+
+client/node_modules
+server/node_modules

@@ -1,0 +1,12 @@
+node_modules
+.esbuild
+.vscode
+.eslintrc.js
+jest.config.js
+dist
+.run
+.idea
+.next
+
+client/node_modules
+server/node_modules
