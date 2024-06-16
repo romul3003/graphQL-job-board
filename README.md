@@ -1,7 +1,14 @@
-## Run graphQL server:
+## Start the backend server:
 from the server directory
 `npm run start`
 
-from the client directory
+
 ## Run client dev mode:
+from the client directory
 `npm run start`
+
+## login for testing
+```sh
+email: 'alice@facegle.io',
+password: 'alice123',
+```
