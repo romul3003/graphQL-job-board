@@ -71,7 +71,9 @@ export const resolvers = {
 
   Job: {
     // add company from db to response according to schema
-    company: job => getCompany(job.companyId),
+    company: (job, _args, { companyLoader }) => {
+      return companyLoader.load(job.companyId)
+    },
     // add date from db to response
     date: job => toIsoDate(job.createdAt),
   },
