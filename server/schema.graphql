@@ -1,7 +1,7 @@
 type Query {
   company(id: ID!): Company
   job(id: ID!): Job # get the job by id
-  jobs: [Job!]
+  jobs(limit: Int, offset: Int): JobSubList
 }
 
 type Mutation {
@@ -24,12 +24,17 @@ Represents a job ad posted to our board.
 type Job {
   id: ID!
   """
-  The __date__ when the job was published, in ISO-8601 format. `2022-120-31`.
+  The __date__ when the job was published, in ISO-8601 format. `2022-12-31`.
   """
   date: String!
   title: String!
   company: Company!
   description: String
+}
+
+type JobSubList {
+  items: [Job!]!
+  totalCount: Int!
 }
 
 input CreateJobInput {
